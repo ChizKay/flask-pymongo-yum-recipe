@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Add Recipe</h3>
+<div class="row">
+    <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix"></i>
+                    <select id="cuisine" name="cuisine_name">
+                  <option value="" disabled selected>Choose Cuisine</option>
+                  {% for cuisine in cuisines %}
+                      <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Cuisine Type</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix"></i>
+                <input id="dish_name" name="dish_name" type="text">
+                <label for="icon_prefix">Dish Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix"></i>
+                <textarea name="prep_instructions" id="prep_instructions" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Instructions</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="chips chips-placeholder"></div>
+            </div>
+        </div>
+</div>
+<div class="row">
+    <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+                <i class="material-icons right"></i>
+    </button>
+</div>
+</form>
+</div>
+
+{% endblock %}

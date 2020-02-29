@@ -16,7 +16,39 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipe')
 def get_recipe():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=mongo.db.recipes.find(), cuisines=mongo.db.cuisines.find())
+    
+
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template("addrecipe.html", cuisines=mongo.db.cuisines.find())
+    
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    tasks = mongo.db.tasks
+    tasks.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipe'))    
+    
+    
+@app.route('/french_cuisine')
+def french_cuisine():
+    return render_template("french.html", french=mongo.db.french_cuisine.find())
+    
+    
+@app.route('/italian_cuisine')
+def italian_cuisine():
+    return render_template("italian.html", italian=mongo.db.italian_cuisine.find())
+    
+    
+@app.route('/mexican_cuisine')
+def mexican_cuisine():
+    return render_template("mexican.html", mexican=mongo.db.mexican_cuisine.find())
+    
+    
+@app.route('/other_cuisine')
+def other_cuisine():
+    return render_template("other.html", other=mongo.db.other.find())
     
     
 if __name__ == '__main__':
