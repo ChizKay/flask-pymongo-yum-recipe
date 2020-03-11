@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for recipe in recipes %}
+    <div class= "col s12">
+        <div class="">
+            <h4>{{recipe.dish_name}}</h4>
+            <br>
+            <br>
+            <div><img src="{{recipe.image}}"></div>
+            <br>
+            <div>
+               <h6>Ingredients</h6
+               <br>
+               {{recipe.ingredients}}
+            </div>
+            <div>
+                <h6>Instructions</h6>
+                <br>
+                {{recipe.prep_instructions}}
+            </div>
+            
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
