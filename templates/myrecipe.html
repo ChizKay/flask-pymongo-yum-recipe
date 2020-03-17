@@ -1,25 +1,36 @@
-{% extends 'base.html' %}
-{% block content %}
-    {% for recipe in recipes %}
-    <div class= "col s12">
-        <div class="">
-            <h4>{{recipe.dish_name}}</h4>
-            <br>
-            <br>
-            <div><img src="{{recipe.image}}"></div>
-            <br>
-            <div>
-               <h6>Ingredients</h6
-               <br>
-               {{recipe.ingredients}}
-            </div>
-            <div>
-                <h6>Instructions</h6>
-                <br>
-                {{recipe.prep_instructions}}
-            </div>
-            
+{% extends 'base.html' %} {% block content %} {% for recipe in recipes %}
+<div class="row">
+    <br>
+    <br>
+    <div class="col s12 card">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="{{recipe.image}}">
         </div>
+        <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">expand_more</i></span>
+        </div>
+        <div class="card-reveal hoverable indigo lighten-5">
+            <span class="card-title green-text"><i class="material-icons right">expand_less</i><h4>{{recipe.dish_name}}</h4></span>
+            <br>
+            <h5> <em>Ingredients</em></h5>
+            <br>
+            <div class="chip blue lighten-1">
+                {{recipe.ingredients}}
+            </div>
+            <br>
+            <br>
+            <div class="">
+                <h5><em>Preparation Instructions:</em></h5>
+                <br> {{recipe.instructions}}
+            </div>
+        </div>
+        <div class="col s6">
+                <a href="{{url_for('edit_recipe')}}" class="waves-effect waves-light btn btn_small green">Edit</a>
+                <a href="{{url_for('delete_recipe')}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+            </div>
     </div>
-    {% endfor %}
-{% endblock %}
+    <br>
+    <br>
+    <br>
+</div>
+{% endfor %} {% endblock %}

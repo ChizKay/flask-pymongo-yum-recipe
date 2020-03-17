@@ -1,18 +1,18 @@
 body {
-     background-image: url('https://c.wallhere.com/photos/ed/1c/africa_light_brazil_food_black_beautiful_brasil_blackbackground-737768.jpg!d');
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-                background-size: cover;
-                
+    background: url('https://c.wallhere.com/photos/ed/1c/africa_light_brazil_food_black_beautiful_brasil_blackbackground-737768.jpg!d') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+    
 }
 
 .row {
-     max-height: 660px;
+     height: 660px;
 }
 
 img {
-     max-height: 600px;
+     height: 600px;
 }
 
 .side-nav li>a {
@@ -21,9 +21,28 @@ img {
      padding: 38px;
 }
 
+.button-collapse {
+     font-size: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+     .nav-wrapper {
+          font-size: 20px
+          
+     }
+     
+     .button-collapse {
+     font-size: 30px;
+}
+}
+
 @media only screen and (min-width: 500px) {
      .nav-wrapper {
           font-size: 20px
+     }
+     .side-nav{
+          font-size:20px;
+     }     
           
      }
 }

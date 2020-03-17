@@ -30,65 +30,30 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('my_recipe'))    
 
-@app.route('/update_cuisine', methods=["POST"])
-def update_cuisine():
-    cuisines = mongo.db.cuisines
-    cuisines.update(
+@app.route('/update_recipe', methods=["POST"])
+def update_recipe():
+    recipes = mongo.db.recipes
+    recipes.update(
     {
-        'cuisine_name':request.form.get('cuisine_name')
-    })
-    return redirect(url_for('get_recipe'))   
-    
-@app.route('/update_french', methods=["POST"])
-def update_french():
-    french = mongo.db.french_cuisine
-    french.update(
-    {
+        'cuisine_name':request.form.get('cuisine_name'),
         'dish_name':request.form.get('dish_name'),
         'image':request.form.get('image'),
         'ingredients':request.form.get('ingredients'),
-        'instructions':request.form.get('instructions'),
+        'instructions':request.form.get('instructions')
     })
-    return redirect(url_for('french_cuisine'))  
+    return redirect(url_for('get_recipe'))  
     
     
-@app.route('/update_italian', methods=["POST"])
-def update_italian():
-    italian = mongo.db.italian_cuisine
-    italian.update(
-    {
-        'dish_name':request.form.get('dish_name'),
-        'image':request.form.get('image'),
-        'ingredients':request.form.get('ingredients'),
-        'instructions':request.form.get('instructions'),
-    })
-    return redirect(url_for('italian_cuisine'))
-
-
-@app.route('/update_mexican', methods=["POST"])
-def update_mexican():
-    mexican = mongo.db.mexican_cuisine
-    mexican.update(
-    {
-        'dish_name':request.form.get('dish_name'),
-        'image':request.form.get('image'),
-        'ingredients':request.form.get('ingredients'),
-        'instructions':request.form.get('instructions'),
-    })
-    return redirect(url_for('mexican_cuisine'))   
+@app.route('/edit_recipe/')
+def edit_recipe():
+    the_recipe =  mongo.db.recipes.find_one()
+    return render_template('editrecipe.html', recipe=the_recipe)    
     
 
-@app.route('/update_other', methods=["POST"])
-def update_other():
-    other = mongo.db.other
-    other.update(
-    {
-        'dish_name':request.form.get('dish_name'),
-        'image':request.form.get('image'),
-        'ingredients':request.form.get('ingredients'),
-        'instructions':request.form.get('instructions'),
-    })
-    return redirect(url_for('other_cuisine'))
+@app.route('/delete_recipe/')
+def delete_recipe():
+    mongo.db.recipes.remove()
+    return redirect(url_for('get_recipe'))
 
     
     

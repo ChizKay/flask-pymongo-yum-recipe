@@ -22,7 +22,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('add_recipe')}}" target="_blank">Create Recipe</a></li>
                     <li><a class="dropdown-button" href="{{url_for('get_recipe')}}" data-activates="dropdown1" target="_blank">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="">My Recipes</a></li>
+                    <li><a href="{{url_for('my_recipe')}}">My Recipes</a></li>
                 </ul>
                 <ul class="side-nav indigo lighten-5" id="mobile-demo">
                     <li><a href="{{url_for('add_recipe')}}">Create Recipe</a></li>
@@ -30,6 +30,7 @@
                     <li><a href="{{url_for('italian_cuisine')}}" target="_blank">Italian</a></li>
                     <li><a href="{{url_for('mexican_cuisine')}}" target="_blank">Mexican</a></li>
                     <li><a href="{{url_for('other_cuisine')}}" target="_blank">Other</a></li>
+                    <li><a href="{{url_for('my_recipe')}}" target="_blank">My Recipes</a></li>
                 </ul>
             </div>
         </nav>
