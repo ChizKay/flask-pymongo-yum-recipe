@@ -3,44 +3,39 @@
 <h3 class="grey-text text-lighten-5">Edit Recipe</h3>
 <br>
 <div class="row">
-    <form action="{{ url_for('update_recipe') }}" method="POST" class="col s12">
+    <form action="{{ url_for('update_recipe', recipe_id=recipe.id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12 grey-text text-lighten-5">
                     <i class="material-icons prefix">restaurant_menu</i>
                     <select id="cuisine" name="cuisine_name">
                   <option value="" disabled selected>Choose Cuisine</option>
-                  {% for cuisine in cuisines %}
-                      <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
-                  {% endfor %}
+                   {% for csn in cuisine %}
+                          <option value="{{csn.cuisine_name}}" selected>{{csn.cuisine_name}}</option>
+                    {% endfor %} 
                 </select>
                     <label>Cuisine Type</label>
                 </div>
             </div>
             <div class="input-field col s12 grey-text text-lighten-5">
                 <i class="material-icons prefix">restaurant</i>
-                <input id="dish_name" name="dish_name" type="text">
+                <input id="dish_name" name="dish_name" type="text" class="validate" value="{{recipe.dish_name}}">
                 <label for="icon_prefix">Dish Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 grey-text text-lighten-5">
                 <i class="material-icons prefix">link</i>
-                <input id="image" name="image" type="text">
+                <input id="image" name="image" type="text" class="validate" value="{{recipe.image}}">
                 <label for="icon_prefix">Image Link</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 grey-text text-lighten-5">
                 <i class="material-icons prefix">list</i>
-                <textarea name="prep_instructions" id="prep_instructions" class="materialize-textarea"></textarea>
+                <textarea name="prep_instructions" id="prep_instructions" class="materialize-textarea">{{recipe.prep_instructions}}</textarea>
                 <label for="icon_prefix">Instructions</label>
             </div>
-        </div>
-        <div class="input-field col s12 grey-text text-lighten-5">
-            <i class="material-icons prefix">list</i>
-                <textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
-                <label for="icon_prefix">Ingredients</label>
         </div>
 </div>
 <div class="row">
@@ -51,13 +46,4 @@
 </form>
 </div>
 
-<script type="text/javascript">
-    function textReplace() {
-        var text = document.getElementById("Ingredients").value;
-        text = text.replace(/\n/g, "</li>\n<br/><li>");
-        text = "<ul><br/><li>" + text + "</li></ul>";
-        document.getElementById("Ingredients").value = text;
-    }
-    document.getElementById("myrecipe").onsubmit = textReplace;
-</script>
 {% endblock %}

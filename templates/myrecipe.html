@@ -14,8 +14,8 @@
             <br>
             <h5> <em>Ingredients</em></h5>
             <br>
-            <div class="chip blue lighten-1">
-                {{recipe.ingredients}}
+            <div class="chips chips-placeholder">
+                <i class="close material-icons blue accent-1">close</i>
             </div>
             <br>
             <br>
@@ -25,9 +25,11 @@
             </div>
         </div>
         <div class="col s6">
-                <a href="{{url_for('edit_recipe')}}" class="waves-effect waves-light btn btn_small green">Edit</a>
-                <a href="{{url_for('delete_recipe')}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small green">Edit</a>
+            <div class="tooltip"><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+                <span class="tooltiptext">This action is irreversible!</span>
             </div>
+        </div>
     </div>
     <br>
     <br>

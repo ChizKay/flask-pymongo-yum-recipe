@@ -10,6 +10,7 @@
 <body>
     <header>
         <nav>
+            <!------- DROPDOWN-------->
             <ul id="dropdown1" class="dropdown-content blue-grey darken-4">
                 <li><a href="{{url_for('french_cuisine')}}" target="_blank">French</a></li>
                 <li><a href="{{url_for('italian_cuisine')}}" target="_blank">Italian</a></li>
@@ -21,8 +22,9 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('add_recipe')}}" target="_blank">Create Recipe</a></li>
+            <!----------DROPDOWN ACTIVATOR--------->
                     <li><a class="dropdown-button" href="{{url_for('get_recipe')}}" data-activates="dropdown1" target="_blank">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="{{url_for('my_recipe')}}">My Recipes</a></li>
+                    <li><a href="{{url_for('my_recipe')}}" target="_blank">My Recipes</a></li>
                 </ul>
                 <ul class="side-nav indigo lighten-5" id="mobile-demo">
                     <li><a href="{{url_for('add_recipe')}}">Create Recipe</a></li>
@@ -39,7 +41,7 @@
     <div class="container">
         {% block content %} {% endblock %}
         <div>
-
+<!---------------------SCRIPTS--------------------->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
             </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
