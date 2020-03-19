@@ -8,10 +8,10 @@ This site was created in the most simplistic manner, in order for the user to na
  
 ## Features
 ##### Navigation Bar
-- Materialize navbar was used here, links to all sections of the website on the right. Responsive, has a hamburger menu on smaller devices.
+- Materialize navbar was used here, links to all sections of the website on the right(on large devices). Responsive, has a hamburger menu on smaller devices, with the links on the left panel.
  
  ##### Cuisine links
- - Materialize cards were using. Have an image displaying the recipe, expands on click, alternatively can using the materialize icon (arrow pointing down). Shows Recipe name(dish name), ingredients (tags), and preparation instructions. Can click icon on top right to expand, reverts to the initial image display. A handy figure that allows the user to stay on the page without going back and forth on tabs to view other recipes from the same Cuisine.
+ - Materialize cards were using. Have an image displaying the recipe, expands on click, alternatively can use the materialize icon (arrow pointing down), on the bottom right corner. Shows Recipe name(dish name), ingredients (tags), and preparation instructions. Can click icon on top right to expand, reverts to the initial image display. A handy figure that allows the user to stay on the page without going back and forth on tabs to view other recipes from the same Cuisine.
  
  ###### Create Recipe
  - Materialize form used. Data for Cuisine type(option to pick from the 4 Cuisine types for categorisation), Dish name(input), Image link (Url link to the image should be pasted in the input text), Instructions(textarea) is sent to the database. The result is displayed on the "My Recipe" page.
