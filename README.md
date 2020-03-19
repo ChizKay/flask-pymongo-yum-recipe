@@ -41,29 +41,37 @@ This section is also where you would share links to any wireframes, mockups, dia
 ###### Python
 - This Project uses Flask as a framework. Using jinja templates, to reduce the amount of HTML code.
 
-
-
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The project has been tested on the following devices:
+  - OnePlus 3t
+  - OnePlus 6t
+  - Huawei P smart
+  - Xiaomi Redmi 8
+  - Samsung S9
+  - Iphone 6s
+  - Iphone X
+  - HP i3
+  - HP i5
+  - Apple MacBook air (2018)
+  
+Testing on the above devices was almost flawless. All buttons and form fields were responsive and fully functional. The Form on the #Create Recipe# page works as intended, data is stored in mongo.db atlas and redirected to the #My Recipe# page. The submitted recipe displays as intended. When the expand icon(on the right top corner of the recipe image) is clicked, the Dish name, Ingredients and Instructions are displayed. The User can then enter individual ingredients in the form field provided. Data is dispalyed in chips, which unfortunately is not sent to the database. So the data is lost when page is refreshed. Still looking for ways to fix this issue. Nonetheless, this seemed a neat way to enter the ingredients.
+The Edit and Delete buttons work as intended. On hover the delete button displays a tooltip warning the user that the action is irreversible.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
+Overall the site is quite responsive on both small and large devices. Materialize makes the transition quite smooth. 
+ 
 ## Deployment
+
+This site is deployed on Heroku.
+The following code was used to achieve this:
+```
+heroku login
+git init
+git add .
+git commit -m 'first commit message'
+heroku git:remote -a flask-pymongo-yum-recipe
+git push heroku master
+```
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
