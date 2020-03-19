@@ -14,7 +14,7 @@ This site was created in the most simplistic manner, in order for the user to na
  - Materialize cards were using. Have an image displaying the recipe, expands on click, alternatively can using the materialize icon (arrow pointing down). Shows Recipe name(dish name), ingredients (tags), and preparation instructions. Can click icon on top right to expand, reverts to the initial image display. A handy figure that allows the user to stay on the page without going back and forth on tabs to view other recipes from the same Cuisine.
  
  ###### Create Recipe
- - Materialize form used. Data for Cuisine type, Dish name, Image link (Url link to the image should be pasted in the input text), Instructions is sent to the database. The result is displayed on the "My Recipe" page.
+ - Materialize form used. Data for Cuisine type(option to pick from the 4 Cuisine types for categorisation), Dish name(input), Image link (Url link to the image should be pasted in the input text), Instructions(textarea) is sent to the database. The result is displayed on the "My Recipe" page.
  
  ###### My Recipe
  - Same layout as the Cuisine Links. The stand out feature is the ability to add tags in the ingredients sections.
@@ -84,5 +84,3 @@ cd flask-pymongo-yum-recipe
 ### Acknowledgements
 
 - I received inspiration for this project from the code institute>task-manager>mini project. used the code from that particular project as a guide. 
-
-
