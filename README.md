@@ -32,10 +32,15 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+###### HTML5
+###### CSS
+###### [Materialize 0.100.2](http://archives.materializecss.com/0.100.2/)
+- For easy layout and styling. Icons used in the project are from the materialize icons library.
+###### [JQuery 3.2.1](https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js)
+- The project uses **JQuery** to simplify DOM manipulation.
+###### Python
+- This Project uses Flask as a framework. Using jinja templates, to reduce the amount of HTML code.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
 
 
 ## Testing
@@ -73,13 +78,14 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- All the recipe ingredients and instructions were copied from [Bon Appetit](https://www.bonappetit.com/recipes).
 
 ### Media
-- The photos used in this site were obtained from ...
+- The Background image on the site was taken from a background images search.
+- All other images and recipes were copied from [Bon Appetit](https://www.bonappetit.com/recipes).
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from the code institute>task-manager>mini project. used the code from that particular project as a guide. 
 
 
