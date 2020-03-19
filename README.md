@@ -4,7 +4,11 @@ This website is a simple recipe site that displays 4 types of cuisines (with one
 ## UX
  
 This site was created in the most simplistic manner, in order for the user to navigate through it with ease. This website is ideal for users that want all the information they need about a recipe on a singular page, rather than the site taking the user to a seperate page to view more information about a particular recipe.
+ - As a User you want all the information you need displayed neatly and conviniently in one place. This site provides that with its layout.
+ - As a User you want an easy way to add/edit/delete your recipes to the site. This site provides that with the form provided in #Create Recipe#.
+ - As a User you recipes to be grouped according to their cuisine. This site provides that.
  
+Link to [Wireframes](https://www.dropbox.com/s/ve5xs4nnbn7necp/03-19%20Scan1.pdf?dl=0)
  
 ## Features
 ##### Navigation Bar
