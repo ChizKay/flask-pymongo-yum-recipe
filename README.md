@@ -81,7 +81,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 - All the recipe ingredients and instructions were copied from [Bon Appetit](https://www.bonappetit.com/recipes).
 
 ### Media
-- The Background image on the site was taken from a background images search.
+- The Background image on the site was taken from a background images [Google](https://www.google.com/) search.
 - All other images and recipes were copied from [Bon Appetit](https://www.bonappetit.com/recipes).
 
 ### Acknowledgements
