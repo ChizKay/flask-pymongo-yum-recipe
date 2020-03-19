@@ -3,10 +3,10 @@
 This website is a simple recipe site that displays 4 types of cuisines (with one being a generalised one), on seperate pages. It allows users to add their own recipes, edit and delete them. Created recipes are displayed on a seperate page for easy access.
 ## UX
  
-This site was created in the most simplistic manner, in order for the user to navigate through it with ease. This website is ideal for users that want all the information they need about a recipe on a singular page, rather than the site taking the user to a seperate page to view more information about a particular recipe.
- - As a User you want all the information you need displayed neatly and conviniently in one place. This site provides that with its layout.
+This site was created in the most simplistic manner, in order for the user to navigate through it with ease. This website is ideal for users that want all the information they need about a recipe from a Cuisine on a singular page, rather than the site taking the user to a seperate page to view more information about that particular recipe.
+ - As a User you want all the information you need on a recipe displayed neatly and conveniently in one place. This site provides that with its layout.
  - As a User you want an easy way to add/edit/delete your recipes to the site. This site provides that with the form provided in #Create Recipe#.
- - As a User you recipes to be grouped according to their cuisine. This site provides that.
+ - As a User you want recipes to be grouped according to their Cuisine. This site provides that.
  
 Link to [Wireframes](https://www.dropbox.com/s/ve5xs4nnbn7necp/03-19%20Scan1.pdf?dl=0)
  
@@ -15,7 +15,13 @@ Link to [Wireframes](https://www.dropbox.com/s/ve5xs4nnbn7necp/03-19%20Scan1.pdf
 - Materialize navbar was used here, links to all sections of the website on the right(on large devices). Responsive, has a hamburger menu on smaller devices, with the links on the left panel.
  
  ##### Cuisine links
- - Materialize cards were using. Have an image displaying the recipe, expands on click, alternatively can use the materialize icon (arrow pointing down), on the bottom right corner. Shows Recipe name(dish name), ingredients (tags), and preparation instructions. Can click icon on top right to expand, reverts to the initial image display. A handy figure that allows the user to stay on the page without going back and forth on tabs to view other recipes from the same Cuisine.
+ 4 main links
+ - French
+ - Italian
+ - Mexican
+ - Other
+ 
+Materialize cards were used. An image displaying the recipe, expands on click, alternatively can use the materialize icon (arrow pointing down), on the bottom right corner. Shows Recipe name(dish name), ingredients (tags), and preparation instructions. Can click icon on top right to expand, reverts to the initial image display. A handy figure that allows the user to stay on the page without going back and forth on tabs to view other recipes from the same Cuisine.
  
  ###### Create Recipe
  - Materialize form used. Data for Cuisine type(option to pick from the 4 Cuisine types for categorisation), Dish name(input), Image link (Url link to the image should be pasted in the input text), Instructions(textarea) is sent to the database. The result is displayed on the "My Recipe" page.
@@ -26,6 +32,7 @@ Link to [Wireframes](https://www.dropbox.com/s/ve5xs4nnbn7necp/03-19%20Scan1.pdf
 
 ### Features Left to Implement
 - Chip data from the ingredients tags to be saved after reload. Still looking for ways to achieve this.
+- Filter option to group cuisines on the #My Recipe# page.
 
 ## Technologies Used
 
@@ -36,7 +43,7 @@ Link to [Wireframes](https://www.dropbox.com/s/ve5xs4nnbn7necp/03-19%20Scan1.pdf
 ###### [JQuery 3.2.1](https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js)
 - The project uses **JQuery** to simplify DOM manipulation.
 ###### Python
-- This Project uses Flask as a framework. Using jinja templates, to reduce the amount of HTML code.
+- This Project uses **Flask** as a framework. Using jinja templates, to reduce the amount of HTML code.
 
 ## Testing
 
@@ -87,4 +94,4 @@ cd flask-pymongo-yum-recipe
 
 ### Acknowledgements
 
-- I received inspiration for this project from the code institute>task-manager>mini project. used the code from that particular project as a guide. 
+- I received inspiration for this project from the code institute>task-manager>mini project. Used the code from that particular project as a guide. 
