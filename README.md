@@ -73,7 +73,7 @@ heroku git:remote -a flask-pymongo-yum-recipe
 git push heroku master
 ```
 
-Use Git to clone flask-pymongo-yum-recipe's source code to your local machine.
+Use Git to clone #flask-pymongo-yum-recipe#'s source code to your local machine.
 ```
 heroku git:clone -a flask-pymongo-yum-recipe
 cd flask-pymongo-yum-recipe
