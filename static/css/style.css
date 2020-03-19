@@ -1,4 +1,5 @@
 /*--------BACKGROUND IMAGE-------*/
+
 body {
     background: url('https://c.wallhere.com/photos/ed/1c/africa_light_brazil_food_black_beautiful_brasil_blackbackground-737768.jpg!d') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -9,11 +10,13 @@ body {
 }
 
 /*--------RECIPE IMAGES-------*/
+
 img {
     height: 500px;
 }
 
 /*--------NAVBAR-------*/
+
 .side-nav li>a {
     font-size: 20px;
     font-weight: bolder;
@@ -26,7 +29,7 @@ img {
 
 /*--------RECIPE STYLES-------*/
 
-.material-icons right{
+.material-icons right {
     font-size: 40px;
 }
 
@@ -41,12 +44,12 @@ img {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 160px;
+    width: 180px;
     background-color: black;
     color: #fff;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
+    border-radius: 4px;
 
     /* Position the tooltip text - see examples below! */
     position: absolute;
@@ -60,31 +63,20 @@ img {
 }
 
 /*--------MEDIA QUERIES-------*/
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 500px) {
     nav .nav-wrapper {
-        height: 100px;
+        height: 5%;
 
     }
-    nav,
-    nav .nav-wrapper i,
-    nav a.button-collapse,
-    nav a.button-collapse i {
-        height: 64px;
-        line-height: 64px;
-        font-size: 48px;
+
+    i.material-icons {
+        font-size: 30px;
+
     }
+
+    .brand-logo {
+        font-size: 30px;
+    }
+
 }
-
-
-.brand-logo {
-    line-height: 100px;
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-.button-collapse {
-    font-size: 30px;
-}
-
-
-
