@@ -5,15 +5,8 @@ This website is a simple recipe site that displays 4 types of cuisines (with one
  
 This site was created in the most simplistic manner, in order for the user to navigate through it with ease. This website is ideal for users that want all the information they need about a recipe on a singular page, rather than the site taking the user to a seperate page to view more information about a particular recipe.
  
-
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-
+ 
 ## Features
-
 ##### Navigation Bar
 - Materialize navbar was used here, links to all sections of the website on the right. Responsive, has a hamburger menu on smaller devices.
  
